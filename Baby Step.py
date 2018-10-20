@@ -1,3 +1,5 @@
 colors = "blue","red","yellow","purple"
+counter = 1
 for color in colors:
-    print ("I like",color)
+    print (counter,") I like",color)
+    counter = counter + 1

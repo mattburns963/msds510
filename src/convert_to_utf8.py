@@ -8,17 +8,11 @@ def argumentExists(index): #function to try get arguments that will not crash pr
     else:
         return sys.argv[index]
  
-def conversion(input, output): #function to write out file.
-    avengers = open(input,'rb')
+
+    avengers = open(avengers.csv,'rb')
     avengersdecoded = avengers.read()
     avengersdecoded = avengersdecoded.decode('ISO-8859-1')
     avengers.close()
-    writeAvengers = open(output, 'w')
+    writeAvengers = open(avengers_utf8.csv, 'w')
     writeAvengers.write(avengersdecoded)
     writeAvengers.close()
- 
-if __name__ == "__main__":
-    targetFile = argumentExists(1)
-    resultFile = argumentExists(2)
-    if targetFile and resultFile: #both arguments have value
-        conversion(targetFile, resultFile)
